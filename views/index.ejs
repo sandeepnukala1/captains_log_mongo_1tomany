@@ -6,6 +6,12 @@
     <title>Home</title>
 </head>
 <body>
-    This is home
+    <h1>Existing logs</h1>
+    <ul>
+        <% for(let log of logs) { %>
+          <li><%= log.title %></li>
+        <% } %>
+    </ul>
+    <a href="logs/new">Create a new log here!</a>
 </body>
 </html>

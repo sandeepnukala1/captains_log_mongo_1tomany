@@ -29,11 +29,11 @@ app.get("/logs", (req, res) => {
     })
 })
 
-app.get("/logs",(req, res) => {
+app.get("/logs/new",(req, res) => {
     res.render("new");
 });
 
-app.post("/logs", (req, res) => {
+app.post("/logs/new", (req, res) => {
   req.body.shipIsBroken === "on" ? req.body.shipIsBroken = true : 
   req.body.shipIsBroken = false
   Log.create(req.body, (error, createdLog) => {
